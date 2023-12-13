@@ -160,33 +160,17 @@ Job: You, as the client, give commands (like 'build this container' or 'run that
 ## The layers concept.
 When you build a Docker image using a Dockerfile, each instruction in the Dockerfile creates a layer in the final image. Docker layers are crucial for optimizing image size, improving build speed, and managing image updates efficiently.
 Base Image Layer:Every Docker image starts with a base image layer. This layer contains the operating system and essential components.It's the foundation upon which you build your custom image.
-```mkdir kemo
+```
+mkdir kemo
+```
+```
 sumit@sumit:~$ cd kemo
 sumit@sumit:~/kemo$ touch dockerfile
 sumit@sumit:~/kemo$ vi dockerfile
+FROM Ubuntu:23.04
 ```
 
-###All commands used in layered concept
 
-```FROM ubuntu:23.04
-LABEL name="sumit chaubey"
-LABEL email="sumitchaubey065@gmail.com"
-ENV NAME saket
-ENV PASS password
-RUN pwd>/tmp/1stpwd.txt
-RUN cd /tmp/
-RUN pwd>/tmp/2ndpwd.txt
-WORKDIR /tmp
-RUN pwd>/tmp/3rdpwd.txt
-RUN apt-get update && apt-get install -y openssh-server && apt-get update && apt-get install -y python
-RUN useradd -d /home/sumit -g root -G sudo -m -p $(echo "$PASS" | openssl passwd -1 -stdin) $NAME
-RUN whoami > /tmp/1stwhoami.txt
-USER $NAME
-RUN whoami > /tmp/2ndwhoami.txt
-RUN mkdir -p /tmp/project
-COPY dockerfile /tmp/project/
-CMD ["sh"]
-```
 
 ```
 sumit@sumit:~/kemo$ sudo docker image build -t myoperation:01 .
@@ -326,6 +310,30 @@ RUN touch /tmp/3.txt
 sumit@sumit:~/kemo$ sudo docker image ls |wc
 ```
 12      83     867
+
+
+
+###All commands used in layered concept
+
+```FROM ubuntu:23.04
+LABEL name="sumit chaubey"
+LABEL email="sumitchaubey065@gmail.com"
+ENV NAME saket
+ENV PASS password
+RUN pwd>/tmp/1stpwd.txt
+RUN cd /tmp/
+RUN pwd>/tmp/2ndpwd.txt
+WORKDIR /tmp
+RUN pwd>/tmp/3rdpwd.txt
+RUN apt-get update && apt-get install -y openssh-server && apt-get update && apt-get install -y python
+RUN useradd -d /home/sumit -g root -G sudo -m -p $(echo "$PASS" | openssl passwd -1 -stdin) $NAME
+RUN whoami > /tmp/1stwhoami.txt
+USER $NAME
+RUN whoami > /tmp/2ndwhoami.txt
+RUN mkdir -p /tmp/project
+COPY dockerfile /tmp/project/
+CMD ["sh"]
+```
 
 ## Docker Volume:
 Docker volumes are a way to persist and manage data in Docker containers. They provide a mechanism for storing and sharing data between a container and the host system or between multiple containers. Here are key aspects of Docker volumes:
