@@ -82,7 +82,7 @@ Output:
 Docker version 20.10.21, build 20.10.21-0ubuntu1~22.04.3  
 To check the status of docker we have:  
 ```
-Sudo docker systemctl status docker  
+sudo systemctl status docker  
 ```
 ● docker.service - Docker Application Container Engine  
      Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset:   enabled)  
@@ -96,7 +96,7 @@ TriggeredBy: ● docker.socket
 
 If your docker status is not active:
 ```
-Sudo systemctl enable –now docker
+sudo systemctl enable –now docker
 ```
 ## Docker Basics    
 
