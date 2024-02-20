@@ -69,7 +69,7 @@ Release:	22.04
 Codename:	jammy
 ``````
 
-### Step 1: Install Docker using the following command:
+###  ● Install Docker using the following command:
 
  ```
  sudo apt install docker.io
