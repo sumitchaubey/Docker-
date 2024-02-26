@@ -169,6 +169,11 @@ sumit@sumit:~/kemo$ touch dockerfile
 sumit@sumit:~/kemo$ vi dockerfile
 FROM Ubuntu:23.04
 ```
+cd kemo: This command changes the current working directory to "kemo". The cd stands for "change directory", and it's followed by the directory name "kemo". After running this command, your prompt will show that you are now in the "kemo" directory.
+
+touch dockerfile: This command creates an empty file named "dockerfile" in the current directory. The touch command is often used to update the access and modification timestamps of a file, but in this case, it also creates the file if it doesn't exist.
+
+vi dockerfile: This command opens the "dockerfile" in the vi text editor. The vi editor is a powerful and commonly used text editor in Unix-like systems. If the file doesn't exist, it will be created. If it does exist, vi opens it for editing.
 
 
 
@@ -1117,3 +1122,11 @@ The push refers to repository [127.0.0.1:5000/ubuntu]
 8ceb9643fb36: Pushed 
 latest: digest: sha256:e9bdf73d0872bd8056401aff5a1acdeec598ad3cd16acfbdedd62f36e5f5e0cd size: 529
 ```
+
+## References:
+```
+https://en.wikipedia.org/wiki/Docker_(software)
+https://docker-curriculum.com/
+https://www.youtube.com/watch?v=ETBj0oxe81o&list=PL6XT0grm_Tfje2ySztzdhp0HmCjVj5P4z
+```
+
