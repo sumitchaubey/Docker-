@@ -59,7 +59,7 @@ Containers: Think of a container as a lightweight, standalone, and executable pa
 A Docker image is a snapshot or template of a container. It contains the application code and all its dependencies, organized in layers. Images serve as the blueprint for creating containers.
 
 * 3:Dockerfile: 
-A Dockerfile is a script that contains instructions for building a Docker image. It specifies the base image, sets up the environment, and defines the commands to run.
+A Dockerfile is a script that contain instructions for building a Docker image. It specifies the base image, sets up the environment, and defines the commands to run.
 
 ##  Installation Docker on Linux
 ## Prerequisites:
